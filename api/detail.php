@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-if ($_SERVER["REQUEST_METHOD"] === "POST"){
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nama = $_POST["nama"];
     $jabatan = $_POST["nama"];
     $masa_kerja = $_POST["nama"];
@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
     $gaji_pokok = 0;
 
-    switch ($jabatan){
+    switch ($jabatan) {
         case "staff":
             $gaji_pokok = 3000000;
             break;
@@ -22,40 +22,37 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
             break;
     }
 
-    if ($masa_kerja < 5){
+    if ($masa_kerja < 5) {
         $tunjangan = 500000;
-    }else if($masa_kerja < 10){
+    } elseif ($masa_kerja < 10) {
         $tunjangan = 1000000;
-    }else {
+    } else {
         $tunjangan = 1500000;
     }
 
-    if ($jam_lembur > 0){
+    if ($jam_lembur > 0) {
         $uang_lembur = $jam_lembur * 50000;
-    }else{
+    } else {
         $uang_lembur = 0;
     }
 
-    if ($jumlah_hari_terlambat > 3){
+    if ($jumlah_hari_terlambat > 3) {
         $potongan = ($jumlah_hari_terlambat - 3) * 100000;
-    }else{
+    } else {
         $potongan = 0;
     }
 
-    if ($nilai_kerja < 80){
+    if ($nilai_kerja < 80) {
         $bonus = 0;
-    }else if($nilai_kerja < 90){
+    } elseif ($nilai_kerja < 90) {
         $bonus = 500000;
-    }else{
+    } else {
         $bonus = 1000000;
     }
 
     $gaji_bersih = $gaji_pokok + $tunjangan + $uang_lembur + $bonus - $potongan;
-    
-    
-}else{
+} else {
     header("Location: ../index.html");
-    exit;
+    exit();
 }
-
 ?>
