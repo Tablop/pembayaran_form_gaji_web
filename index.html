@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
-    <form>
+    <form action="api/detail.php" method="POST">
       <div class="judul">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +30,7 @@
       <!--Input 1-->
       <label for="nama">Nama Karyawan</label><br />
       <input
+        required
         type="text"
         placeholder="Abian"
         name="nama"
@@ -73,25 +74,36 @@
           <label for="">Masa Kerja</label><br />
 
           <div class="input-hint">
-            <input type="text" name="masa_kerja" />
+            <input required type="number" name="masa_kerja" min="0" />
             <p>Tahun</p>
           </div>
           <label for="">Nilai Kinerja</label><br />
           <div class="input-hint">
-            <input type="text" nama="nilai_kerja" />
+            <input
+              required
+              type="number"
+              name="nilai_kerja"
+              min="0"
+              max="100"
+            />
             <p>/100</p>
           </div>
         </div>
         <div>
           <label for="">Jam Lembur</label><br />
           <div class="input-hint">
-            <input type="text" name="jam_lembur" />
+            <input required type="text" name="jam_lembur" min="0" />
             <p>Jam</p>
           </div>
 
           <label for="">Jumlah Keterlambatan</label><br />
           <div class="input-hint">
-            <input type="text" nama="jumlah_hari_terlambat" />
+            <input
+              required
+              type="number"
+              nama="jumlah_hari_terlambat"
+              min="0"
+            />
             <p>Hari</p>
           </div>
         </div>
