@@ -1,0 +1,104 @@
+/*Reset Css*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+/*Panel utama*/
+form {
+  width: 600px;
+  border-radius: 10px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0px 0px 3px grey;
+}
+
+/*Judul*/
+.judul {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: green;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 15px 0px;
+}
+
+/*layout Pembantu*/
+.container-col {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.container-col > div {
+  flex-grow: 1;
+}
+
+/*Tombol submit*/
+.hitung {
+  position: fixed;
+  width: 100%;
+  background-color: green;
+  color: white;
+  border: 0px solid transparent;
+  padding: 5px;
+  border-radius: 5px;
+  bottom: -50px;
+  transform: translateX(-16px);
+}
+
+
+form input,
+form select {
+  padding: 5px;
+  width: 100%;
+}
+
+form label {
+  color: grey;
+}
+
+.input-hint {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.input-hint input {
+  flex-grow: 1;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border:1px solid grey;
+}
+
+.input-hint p {
+  flex-shrink: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: lightgray;
+  padding: 0px 10px;
+  text-align: center;
+  line-height: 2;
+  border: 1px solid grey;
+  min-width: 70px;
+}
+
+#jabatan , #nama{
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}

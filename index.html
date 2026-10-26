@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Penggajian Karyawan</title>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <form>
+      <div class="judul">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-circle-user-round preview-icon"
+        >
+          <path d="M17.925 20.056a6 6 0 0 0-11.851.001" />
+          <circle cx="12" cy="11" r="4" />
+          <circle cx="12" cy="12" r="10" />
+        </svg>
+        <p>DATA KARYAWAN</p>
+      </div>
+      <!--Input 1-->
+      <label for="nama">Nama Karyawan</label><br />
+      <input
+        type="text"
+        placeholder="Abian"
+        name="nama"
+        id="nama"
+      /><br /><br />
+
+      <label for="jabatan">Jabatan</label><br />
+      <select name="jabatan" id="jabatan">
+        <option value="staff">Staff</option>
+        <option value="supervisor">Supervisor</option>
+        <option value="manager">Manager</option>
+      </select>
+      <!--end Input 1-->
+      <!--Input 2-->
+      <div class="judul">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-clipboard-list preview-icon"
+        >
+          <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+          <path
+            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+          />
+          <path d="M12 11h4" />
+          <path d="M12 16h4" />
+          <path d="M8 11h.01" />
+          <path d="M8 16h.01" />
+        </svg>
+        <p>DATA OPERASIONAL & KINERJA</p>
+      </div>
+      <div class="container-col">
+        <div>
+          <label for="">Masa Kerja</label><br />
+
+          <div class="input-hint">
+            <input type="text" name="masa_kerja" />
+            <p>Tahun</p>
+          </div>
+          <label for="">Nilai Kinerja</label><br />
+          <div class="input-hint">
+            <input type="text" nama="nilai_kerja" />
+            <p>/100</p>
+          </div>
+        </div>
+        <div>
+          <label for="">Jam Lembur</label><br />
+          <div class="input-hint">
+            <input type="text" name="jam_lembur" />
+            <p>Jam</p>
+          </div>
+
+          <label for="">Jumlah Keterlambatan</label><br />
+          <div class="input-hint">
+            <input type="text" nama="jumlah_hari_terlambat" />
+            <p>Hari</p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="hitung">HITUNG GAJI</button>
+    </form>
+  </body>
+</html>

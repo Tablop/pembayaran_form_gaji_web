@@ -2,11 +2,11 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nama = $_POST["nama"];
-    $jabatan = $_POST["nama"];
-    $masa_kerja = $_POST["nama"];
-    $jam_lembur = $_POST["nama"];
-    $jumlah_hari_terlambat = $_POST["nama"];
-    $nilai_kerja = $_POST["nama"];
+    $jabatan = $_POST["jabatan"];
+    $masa_kerja = $_POST["masa_kerja"];
+    $jam_lembur = $_POST["jam_lembur"];
+    $jumlah_hari_terlambat = $_POST["jumlah_hari_terlambat"];
+    $nilai_kerja = $_POST["nilai_kerja"];
 
     $gaji_pokok = 0;
 
@@ -54,5 +54,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 } else {
     header("Location: ../index.html");
     exit();
-}
-?>
+} ?>
+<?php echo $bonus; ?>
